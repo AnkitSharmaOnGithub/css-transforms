@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Transform</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400&display=swap" rel="stylesheet" />
+
+    <style>
+        body {
+            background-color: #f5f3f4;
+            width: 80%;
+            margin: auto;
+        }
+
+        section {
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: space-around;
+        }
+
+        .section_pers{
+            display: flex;
+            flex-wrap:wrap;
+            justify-content: center;
+        }
+        
+        h3{
+            font-family: "Open Sans", sans-serif;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .card {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: #ffffff;
+            margin: 40px auto;
+        }
+
+        .card>h3 {
+            text-align: center;
+            font-family: "Open Sans", sans-serif;
+            font-weight: 100;
+            color: black;
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #f5f3f4;
+            margin: 20px auto;
+        }
+
+        .fill {
+            background-color: #70c3e8;
+            width: 100px;
+            height: 100px;
+        }
+
+        .rotate:hover {
+            transform: rotate(45deg);
+            transition: transform 1s;
+        }
+
+        .rotateX:hover {
+            transform: rotateX(45deg);
+            transition: transform 1s;
+        }
+
+        .rotateY:hover {
+            transform: rotateY(45deg);
+            transition: transform 1s;
+        }
+
+        .rotateZ:hover {
+            transform: rotateZ(45deg);
+            transition: transform 1s;
+        }
+
+        .scale:hover {
+            transform: scale(2);
+            transition: transform 1s;
+        }
+
+        .scaleX:hover {
+            transform: scaleX(2);
+            transition: transform 1s;
+        }
+
+        .scaleY:hover {
+            transform: scaleY(2);
+            transition: transform 1s;
+        }
+
+        .skew:hover {
+            transform: skew(45deg, 45deg);
+            transition: transform 1s;
+        }
+
+        .skewX:hover {
+            transform: skewX(45deg);
+            transition: transform 1s;
+        }
+
+        .skewY:hover {
+            transform: skewY(45deg);
+            transition: transform 1s;
+        }
+
+        .translate:hover {
+            transform: translate(45px, 45px);
+            transition: transform 1s;
+        }
+
+        .translateX:hover {
+            transform: translateX(45px);
+            transition: transform 1s;
+        }
+
+        .translateY:hover {
+            transform: translateY(45px);
+            transition: transform 1s;
+        }
+
+        .matrix:hover {
+            transform: matrix(2, 2, 0, 2, 45, 0);
+            transition: transform 1s;
+        }
+
+        .rotateX-p100:hover {
+            transform: perspective(100px) rotateX(45deg);
+            transition: transform 1s;
+        }
+
+        .rotateY-p100:hover {
+            transform: perspective(100px) rotateY(45deg);
+            transition: transform 1s;
+        }
+
+        .rotateX-p200:hover {
+            transform: perspective(200px) rotateX(45deg);
+            transition: transform 1s;
+        }
+
+        .rotateY-p200:hover {
+            transform: perspective(200px) rotateY(45deg);
+            transition: transform 1s;
+        }
+
+        .transform_origin-1:hover{
+            transform: rotate(45deg);
+            /* transform-origin: top right; */
+            transform-origin: 100% 0 0;
+            transition: transform 0.5s;
+        }
+
+        .transform_origin-2:hover{
+            transform: rotate(45deg);
+            transform-origin: bottom left;
+            transition: transform 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Css3 Transform</h3>
+
+    <section>
+        <div class="card">
+            <div class="box">
+                <div class="fill rotate"></div>
+            </div>
+
+            <h3>rotate(45deg)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill rotateX"></div>
+            </div>
+
+            <h3>rotateX(45deg)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill rotateY"></div>
+            </div>
+
+            <h3>rotateY(45deg)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill rotateZ"></div>
+            </div>
+
+            <h3>rotateZ(45deg)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill scale"></div>
+            </div>
+
+            <h3>Scale(2)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill scaleX"></div>
+            </div>
+
+            <h3>ScaleX(2)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill scaleY"></div>
+            </div>
+
+            <h3>ScaleY(2)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill skew"></div>
+            </div>
+
+            <h3>skew(45deg, 45deg)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill skewX"></div>
+            </div>
+
+            <h3>skewX(45deg)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill skewY"></div>
+            </div>
+
+            <h3>skewY(45deg)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill translate"></div>
+            </div>
+
+            <h3>translate(45px,45px)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill translateX"></div>
+            </div>
+
+            <h3>translateX(45px)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill translateY"></div>
+            </div>
+
+            <h3>translateY(45px)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill matrix"></div>
+            </div>
+
+            <h3>matrix(2, 2, 0, 2, 45, 0)</h3>
+        </div>
+
+    </section>
+
+    <h3>Perspective : 100</h3>
+    <section class="section_pers">
+        
+
+        <div class="card">
+            <div class="box">
+                <div class="fill rotateX-p100"></div>
+            </div>
+
+            <h3>rotateX(45deg)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill rotateY-p100"></div>
+            </div>
+
+            <h3>rotateY(45deg)</h3>
+        </div>
+
+    </section>
+
+    <h3>Perspective : 200</h3>
+    <section class="section_pers">
+        
+        <div class="card">
+            <div class="box">
+                <div class="fill rotateX-p200"></div>
+            </div>
+
+            <h3>rotateX(45deg)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill rotateY-p200"></div>
+            </div>
+
+            <h3>rotateY(45deg)</h3>
+        </div>
+    </section>
+
+    <h3>Transform origin</h3>
+    <section class="section_pers">
+
+       
+        
+        <div class="card">
+            <div class="box">
+                <div class="fill transform_origin-1"></div>
+            </div>
+
+            <h3>transform-origin : 100% 0 0 rotate(45deg)</h3>
+        </div>
+
+        <div class="card">
+            <div class="box">
+                <div class="fill transform_origin-2"></div>
+            </div>
+
+            <h3>transform-origin : 100% 0 0 rotate(45deg)</h3>
+        </div>
+    </section>
+
+    
+</body>
+
+</html>
